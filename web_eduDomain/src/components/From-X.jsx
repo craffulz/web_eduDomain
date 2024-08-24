@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from "react";
-import { useSpring, useInView, animated } from "@react-spring/web";
+import { useSpring, useInView, animated, to } from "@react-spring/web";
 
 export default function FromX({ children }) {
   const [ref, inView] = useInView({

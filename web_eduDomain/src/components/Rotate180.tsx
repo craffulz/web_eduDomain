@@ -12,7 +12,7 @@ const Rotate180 = ({ children }) => {
       transform: "rotateY(180deg)", translateX:'55px',
       cursor: "pointer",
       opacity: 1,
-      config: { duration: 500 },
+      config: { duration: 200 },
     });
   };
   const handleMouseLeave = () => {

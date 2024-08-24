@@ -2,6 +2,7 @@ import React from "react";
 import Rotate180 from "../Rotate180";
 
 const Features = () => {
+  console.log("Features mounted");
   const [mouseIn, setMouseIn] = React.useState(null);
 
   const features = [
@@ -74,7 +75,7 @@ const Features = () => {
         {features.map((feature, index) => {
           return (
             <React.Fragment key={index}>
-              <Rotate180 className="rotate180">
+              <Rotate180>
                 <div
                   className="feature"
                   onMouseEnter={() => handleMouseEnter(index)}

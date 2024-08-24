@@ -1,6 +1,6 @@
 $back-color: rgb(255, 255, 255);
 $navbar-color: rgb(219, 216, 216);
-$banner-background: url("../assets/banner.jpg");
+$banner-background: url("../assets/portada/biblio.jpg");
 $solution-background: url("../assets/fondos/fondo_soluciones.png");
 $cage-background: rgb(227, 194, 227);
 $brand-color: #772953;
@@ -19,7 +19,10 @@ body {
   padding: 0px;
   background-color: $back-color;
 
-  h1, h3, i, p {
+  h1,
+  h3,
+  i,
+  p {
     margin: 0;
     padding: 0;
   }
@@ -44,7 +47,7 @@ body {
   font-size: 15px;
   font-weight: 400;
 
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 1px 2px 10px #a692ba;
 
   width: 1600px;
@@ -114,7 +117,6 @@ body {
             &:hover {
               border-radius: 12%;
               background: linear-gradient(to right, #c0a4c0, #dec4e6);
-              
             }
           }
         }
@@ -153,29 +155,42 @@ body {
   }
 }
 .banner {
-  padding: 150px 200px;
-  background: linear-gradient(to right, #7b62a0, #772953);
-  //background-image: $banner-background;
-  span {
-    display: block;
-    color: white;
-  }
+  .animated.background {
+    position: relative;
+    padding: 150px 200px;
+    height: 500px;
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen para evitar cambios bruscos */
+    transition: background-image 3s ease-in-out; /* Transición suave entre imágenes */
+    
 
-  .title {
-    font-size: 80px;
-    font-weight: 700;
-  }
-  .resume {
-    padding: 20px;
+    .title.container {
+      background-color: rgba(255, 255, 255, 0.6);
+      box-shadow: 1px 2px 10px #a692ba;
+      border-radius: 25px;
 
-    font-size: 20px;
-    font-weight: 300;
+      .title {
+        font-size: 80px;
+        font-weight: 700;
+        color: $brand-color;
+        padding: 20px;
+      }
+      .resume {
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 500;
 
-    span {
-      padding: 5px;
+        span {
+          padding: 5px;
+          display: block;
+          color: $brand-color;
+        }
+      }
     }
   }
 }
+
+
 .solutions {
   padding: 0px 200px;
   display: flex;
