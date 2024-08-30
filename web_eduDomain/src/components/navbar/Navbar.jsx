@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import mode from "../../assets/moon.svg";
 import Dropdown from "../dropdown/Dropdown";
 
 /**
@@ -169,10 +168,10 @@ const Navbar = () => {
           })}
         </div>
         <div className="side">
-          <div className="btn">App Link -</div>
-          <div className="moon">
-            <img className="mode" src={mode} alt="mode" />
-          </div>
+          <a href="#" className="btn-demo">
+            Demandez une Démo
+          </a>
+
           {/**Aquí puede que introduzcamos otro componente para cambiar el modo de la página web */}
         </div>
       </div>

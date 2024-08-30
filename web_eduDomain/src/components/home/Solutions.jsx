@@ -77,7 +77,7 @@ const Solutions = () => {
   return (
     <div className="solutions">
       <div className="head compo">
-        <h2>EduSolutions</h2>
+        <h2>Solutions</h2>
       </div>
 
       <div className="grid">

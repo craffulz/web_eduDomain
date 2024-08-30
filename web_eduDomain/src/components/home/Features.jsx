@@ -1,5 +1,5 @@
 import React from "react";
-import Rotate180 from "../Rotate180";
+import Rotate180 from "../Rotate180.jsx";
 
 const Features = () => {
   console.log("Features mounted");
@@ -52,6 +52,7 @@ const Features = () => {
    *
    *
    */
+
   const handleMouseEnter = (index) => {
     console.log("Mouse Enter");
     setTimeout(() => {
@@ -66,10 +67,11 @@ const Features = () => {
       setMouseIn(null);
     }, 250);
   };
+
   return (
     <div className="features">
       <div className="head compo">
-        <h2>EduFeatures</h2>
+        <h2>Features</h2>
       </div>
       <div className="background">
         {features.map((feature, index) => {

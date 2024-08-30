@@ -1,15 +1,17 @@
-import React from "react";
 import { animated, useSpring } from "@react-spring/web";
+// eslint-disable-next-line react/prop-types
 const Rotate180 = ({ children }) => {
   const [styles, api] = useSpring(() => ({
-    transform: "rotateY(0deg)", translateX:'0px',
+    transform: "rotateY(0deg)",
+    translateX: "0px",
     opacity: 1,
     cursor: "default",
   }));
 
   const handleMouseEnter = () => {
     api.start({
-      transform: "rotateY(180deg)", translateX:'55px',
+      transform: "rotateY(180deg)",
+      translateX: "55px",
       cursor: "pointer",
       opacity: 1,
       config: { duration: 200 },
@@ -17,7 +19,8 @@ const Rotate180 = ({ children }) => {
   };
   const handleMouseLeave = () => {
     api.start({
-      transform: "rotateY(0deg)", translateX:'0px',
+      transform: "rotateY(0deg)",
+      translateX: "0px",
       cursor: "default",
       opacity: 1,
     });
