@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
-import Dropdown from "../dropdown/Dropdown";
+import Dropdown from "../Dropdown/Dropdown";
+
+import { Link } from "react-router-dom";
 
 /**
  * Este componente representa la barra de navegación de la pagina web
@@ -140,7 +142,9 @@ const Navbar = () => {
     <div className="navbar">
       {/**Por ahora pongo el componente, puede que luego lo elimine y ponga aquí el codigo directamente*/}
       {/* <div className="logo">logo</div> */}
-      <div className="brandname">EduDomain</div>
+      <div className="brandname">
+        <Link to="/solutions">EduDomain</Link>
+      </div>
       <div className="btns">
         <div className="navigation">
           {navbarButtons.map(({ button, drop }, index) => {

@@ -1,0 +1,26 @@
+$back-color: rgb(255, 255, 255);
+$navbar-color: rgb(219, 216, 216);
+$banner-background: url("../assets/portada/biblio.jpg");
+$solution-background: url("../assets/fondos/fondo_soluciones.png");
+$cage-background: rgb(227, 194, 227);
+$brand-color: #772953;
+$solution-background: #f0e1e9;
+$title-font-color: white;
+$box-color: rgb(240, 240, 240);
+
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+.title {
+  display: flex;
+  position: relative;
+  top: 50px;
+  margin-top: 70px;
+  align-self: center;
+
+  color: #772953;
+  background-image: url("../../assets/solutions/res_sketch.jpg");
+
+  font-size: 70px;
+}

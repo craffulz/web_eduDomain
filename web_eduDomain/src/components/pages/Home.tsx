@@ -1,15 +1,13 @@
 import React from "react";
-import Navbar from "../navbar/Navbar";
+import Navbar from "../Navbar/Navbar.jsx";
 import Hero from "../Hero/Hero.jsx"
-import Banner from "../home/Banner.jsx";
-import Solutions from "../home/Solutions"; 
-import Features from "../home/Features";
-import Footer from "../Footer";
+import Solutions from "../Solutions/Solutions.jsx"; 
+import Features from "../Features/Features.jsx";
+import Footer from "../Footer/Footer.js";
 const Home = () => {
   return (
     <>
       <Navbar />
-      
       <Hero />
       <Solutions />
       <Features />
