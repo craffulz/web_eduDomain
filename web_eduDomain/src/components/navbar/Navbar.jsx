@@ -1,3 +1,5 @@
+import "./Navbar.scss";
+
 import { useRef, useState } from "react";
 import Dropdown from "../Dropdown/Dropdown";
 
@@ -62,7 +64,11 @@ const Navbar = () => {
     },
     {
       button: "Support",
-      drop: null,
+      drop: {
+        dButton: "Presentielle",
+        dButtonDesc: "Formation interne",
+        icon: "fa-solid fa-person-walking-arrow-right",
+      },
     },
     {
       button: "Formation",
@@ -87,11 +93,11 @@ const Navbar = () => {
       ],
     },
     {
-      button: "Clients",
+      button: { button: "Clients", route: "/#clients" },
       drop: null,
     },
     {
-      button: "Contactez-nous",
+      button: { button: "Contactez-nous", route: "/contact" },
       drop: null,
     },
   ];
@@ -129,6 +135,7 @@ const Navbar = () => {
       <div className="btns">
         <div className="navigation">
           {navbarButtons.map(({ button, drop }, index) => {
+            console.log(button);
             return (
               <div
                 className="btn"
@@ -144,10 +151,22 @@ const Navbar = () => {
                 onMouseEnter={() => handleMouseEnter(index, drop)}
                 onMouseLeave={handleMouseLeave}
               >
-                {button}
-                {openDrop === index && drop.length > 0 && (
-                  <Dropdown className="drop" drop={(button, drop)}></Dropdown>
+                {typeof button === "string" ? (
+                  <>
+                    {button}
+                    {openDrop === index && drop.length > 0 && (
+                      <Dropdown
+                        className="drop"
+                        drop={(button, drop)}
+                      ></Dropdown>
+                    )}
+                  </>
+                ) : (
+                  <Link to={button.route}>{button.button}</Link>
                 )}
+                {/* {openDrop === index && drop.length > 0 && (
+                  <Dropdown className="drop" drop={(button, drop)}></Dropdown>
+                )} */}
               </div>
             );
           })}

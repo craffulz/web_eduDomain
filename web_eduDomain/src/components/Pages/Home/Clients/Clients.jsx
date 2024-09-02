@@ -53,7 +53,7 @@ const Clients = () => {
 
   return (
     <>
-      <div className="clients">
+      <div className="clients" id="clients">
         <div className="head compo" style={{}}>
           <h2>Clients</h2>
         </div>
