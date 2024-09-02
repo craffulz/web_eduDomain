@@ -21,7 +21,6 @@ $box-color: rgb(240, 240, 240);
   width: 100vw;
   height: 100vh;
 
-  flex-direction: column;
   position: relative;
   box-sizing: border-box;
   .background {
@@ -41,6 +40,8 @@ $box-color: rgb(240, 240, 240);
   }
 
   .ground {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     z-index: 10;
 
@@ -55,7 +56,7 @@ $box-color: rgb(240, 240, 240);
         display: block;
 
         margin-top: 70px;
-        margin-bottom: 80px;
+        margin-bottom: 300px;
 
         align-self: center;
 
@@ -68,7 +69,7 @@ $box-color: rgb(240, 240, 240);
         }
 
         .description {
-          display: inline-block;
+          display: block;
 
           .paragraph {
             display: inline-block;
@@ -93,6 +94,7 @@ $box-color: rgb(240, 240, 240);
       }
       .explaining {
         display: flex;
+
         gap: 20px;
         justify-content: center;
 

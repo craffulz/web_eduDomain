@@ -89,7 +89,7 @@ const Solutions = () => {
             <React.Fragment key={index}>
               <FromX>
                 <Link
-                  to="/solutions"
+                  to="/patrimoine"
                   style={{
                     color: "$brand-color",
                   }}
