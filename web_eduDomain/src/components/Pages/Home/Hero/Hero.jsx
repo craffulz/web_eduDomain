@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import estudiantes_cafe from "../../assets/hero/estudiantes_cafe.jpg";
-import estudiantes_graduacion from "../../assets/hero/estudiantes_graduacion.jpg";
-import residencia_exterior from "../../assets/hero/residencia_exterior.jpg";
-import residencia_interior from "../../assets/hero/residencia_interior.jpg";
+import estudiantes_cafe from "../../../../assets/hero/estudiantes_cafe.jpg";
+import estudiantes_graduacion from "../../../../assets/hero/estudiantes_graduacion.jpg";
+import residencia_exterior from "../../../../assets/hero/residencia_exterior.jpg";
+import residencia_interior from "../../../../assets/hero/residencia_interior.jpg";
 
 //import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";

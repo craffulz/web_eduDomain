@@ -1,7 +1,7 @@
 import "../styles/App.scss";
-import Home from "./Pages/Home.tsx";
+import Home from "./Pages/Home/Home.tsx";
 import { Routes, Route } from "react-router-dom";
-import  Patrimoine  from "../components/Solutions/Patrimoine.jsx";
+import  Patrimoine  from "./Pages/Patrimoine/Patrimoine.jsx";
 const App = () => {
   return (
     <>

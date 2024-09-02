@@ -4,12 +4,11 @@ import "../Clients/Clients.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import chaabi from "../../assets/clients/chaabi.png";
-import ehc from "../../assets/clients/ehc.png";
-import fendary from "../../assets/clients/fendary.png";
-
-import maarifa from "../../assets/clients/maarifa.png";
-import ru from "../../assets/clients/ru.png";
+import chaabi from "../../../../assets/clients/chaabi.png";
+import ehc from "../../../../assets/clients/ehc.png";
+import fendary from "../../../../assets/clients/fendary.png";
+import maarifa from "../../../../assets/clients/maarifa.png";
+import ru from "../../../../assets/clients/ru.png";
 
 const Clients = () => {
   const logos = [

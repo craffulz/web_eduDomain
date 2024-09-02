@@ -1,12 +1,12 @@
-import Solus from "../Pages/Solus.tsx";
+import Solus from "../../Solution/Solus.tsx";
 
-import res_sketch from "../../assets/solutions/res_sketch.jpg";
-import res_fucsia_sketch from "../../assets/solutions/res_sketch_little.png";
-import res_blue_sketch from "../../assets/solutions/res_sketch_little2.png";
+import res_sketch from "../../../assets/solutions/res_sketch.jpg";
+import res_fucsia_sketch from "../../../assets/solutions/res_sketch_little.png";
+import res_blue_sketch from "../../../assets/solutions/res_sketch_little2.png";
 
-import hierarchie_patrimoine from "../../assets/solutions/video_patrimoine.mp4";
-import filtres_patrimoine from "../../assets/solutions/filtres_patrimoine.mp4";
-import screen_patrimoine from "../../assets/solutions/screen_patrimoine.png";
+import hierarchie_patrimoine from "../../../assets/solutions/video_patrimoine.mp4";
+import filtres_patrimoine from "../../../assets/solutions/filtres_patrimoine.mp4";
+import screen_patrimoine from "../../../assets/solutions/screen_patrimoine.png";
 
 const Patrimoine = () => {
   const background = [

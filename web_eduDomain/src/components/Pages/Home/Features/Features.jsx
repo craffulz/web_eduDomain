@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 // eslint-disable-next-line no-unused-vars
-import Rotate180 from "../Animations/Rotate180.jsx";
+
 
 const Features = () => {
   console.log("Features mounted");

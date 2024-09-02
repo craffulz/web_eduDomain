@@ -1,8 +1,8 @@
 import React from "react";
-import FromX from "../Animations/From-X";
+import FromX from "../../../Animations/From-X";
 
 import "./Solutions.scss"
-import fondo_soluciones from "../../assets/fondos/fondo_soluciones.png";
+import fondo_soluciones from "../../../../assets/fondos/fondo_soluciones.png";
 
 import { useSpring, animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
