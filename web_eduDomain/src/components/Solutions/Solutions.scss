@@ -1,0 +1,97 @@
+$back-color: rgb(255, 255, 255);
+$navbar-color: rgb(219, 216, 216);
+$banner-background: url("../assets/portada/biblio.jpg");
+$solution-background: url("../assets/fondos/fondo_soluciones.png");
+$cage-background: rgb(227, 194, 227);
+$brand-color: #772953;
+$solution-background: #f0e1e9;
+$title-font-color: white;
+$box-color: rgb(240, 240, 240);
+
+.solutions {
+  a {
+    text-decoration: none;
+  }
+
+  padding: 0px 200px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  z-index: 0;
+  background-color: #f0e1e9;
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0px 100px;
+    text-align: center;
+  }
+
+  .cage {
+    position: relative;
+    width: 350px;
+    height: 300px;
+    margin: 40px 100px;
+    border: 0.5px solid transparent;
+    padding: 10px;
+
+    background-color: #e0cad1;
+    border-radius: 3ch;
+    box-shadow: 1px 2px 10px #a692ba;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    img {
+      width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+      height: 50%; /* La imagen ocupa el 100% de la altura del contenedor */
+      object-fit: cover; /* Recorta la imagen para llenar el contenedor sin distorsión */
+      border-radius: 3ch;
+    }
+    .ensavoir {
+      display: flex;
+      border-radius: 3ch;
+      background-color: white;
+      width: 94.5%;
+      height: 54.5%;
+      position: absolute;
+      top: 10px;
+      align-items: center;
+      justify-content: center;
+      h3 {
+        font-weight: 900;
+        color: $brand-color;
+        text-shadow: #772953;
+        align-self: center;
+        opacity: 1;
+      }
+    }
+    h3 {
+      color: $brand-color;
+    }
+    p {
+      width: auto;
+      height: auto;
+      padding: 5px;
+      color: #4a3f6c;
+      font-weight: 450;
+    }
+
+    // &:hover {
+    //   cursor: pointer;
+    //   transform: scale(1.05);
+    //   border-color: $brand-color;
+    //   box-shadow: 1px 2px 10px #772953;
+    // }
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.01);
+
+      box-shadow: 1px 2px 15px #a692ba;
+    }
+
+    &:focus {
+      outline: 2px solid $brand-color;
+      transform: scale(1.05);
+      box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

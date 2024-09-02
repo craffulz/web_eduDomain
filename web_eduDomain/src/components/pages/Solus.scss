@@ -9,18 +9,138 @@ $title-font-color: white;
 $box-color: rgb(240, 240, 240);
 
 #root {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
+
+  box-sizing: border-box;
 }
-.title {
-  display: flex;
+.solus {
+  overflow-y: scroll;
+  display: block;
+
+  width: 100vw;
+  height: 100vh;
+
+  flex-direction: column;
   position: relative;
-  top: 50px;
-  margin-top: 70px;
-  align-self: center;
+  box-sizing: border-box;
+  .background {
+    display: block;
+    align-self: center;
 
-  color: #772953;
-  background-image: url("../../assets/solutions/res_sketch.jpg");
+    position: absolute;
+    z-index: 3;
 
-  font-size: 70px;
+    .sketch {
+      margin-left: 700px;
+    }
+
+    .sketch-2 {
+      margin-left: 800px;
+    }
+  }
+
+  .ground {
+    position: absolute;
+    z-index: 10;
+
+    .footer {
+      margin-top: 70px;
+    }
+    .document {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 200px 0px 200px;
+      .header {
+        display: block;
+
+        margin-top: 70px;
+        margin-bottom: 80px;
+
+        align-self: center;
+
+        .title {
+          display: inline-block;
+          margin-top: 80px;
+          color: #772953;
+          font-size: 70px;
+          text-shadow: 1px 20px 10px rgb(166, 146, 186, 2);
+        }
+
+        .description {
+          display: inline-block;
+
+          .paragraph {
+            display: inline-block;
+
+            margin-top: 30px;
+            margin-right: 700px;
+
+            color: #160d36;
+            border-radius: 20px;
+            background-color: rgb(250, 238, 238);
+            box-shadow: 1px 2px 10px #3a165e;
+            padding: 20px;
+
+            font-size: 21px;
+            text-align: justify;
+
+            .patrimoine {
+              display: inline;
+            }
+          }
+        }
+      }
+      .explaining {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+
+        align-items: center;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        .screenshot {
+          margin-bottom: 70px;
+
+          display: flex;
+          align-self: center;
+          object-fit: cover;
+
+          perspective: 3000px;
+          video,
+          img {
+            border-radius: 15px;
+            box-shadow: 1px 2px 10px #3a165e;
+
+            transform: rotateX(15deg) rotateY(15deg);
+            transition: transform 0.5s;
+
+            &:hover {
+              transform: rotateX(0deg) rotateY(0deg);
+              transition: transform 0.5s;
+            }
+          }
+        }
+        .paragraph {
+          display: inline-block;
+
+          background-color: rgb(250, 238, 238);
+          color: #160d36;
+          border-radius: 20px;
+
+          box-shadow: 1px 2px 10px #3a165e;
+          padding: 20px;
+
+          .description {
+            display: inline-block;
+
+            font-size: 16px;
+            p {
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
+  }
 }

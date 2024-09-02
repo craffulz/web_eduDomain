@@ -62,13 +62,7 @@ const Navbar = () => {
     },
     {
       button: "Support",
-      drop: [
-        {
-          dButton: "",
-          dButtonDesc: "",
-          icon: "",
-        },
-      ],
+      drop: null,
     },
     {
       button: "Formation",
@@ -94,23 +88,11 @@ const Navbar = () => {
     },
     {
       button: "Clients",
-      drop: [
-        {
-          dButton: "",
-          dButtonDesc: "",
-          icon: "",
-        },
-      ],
+      drop: null,
     },
     {
       button: "Contactez-nous",
-      drop: [
-        {
-          dButton: "",
-          dButtonDesc: "",
-          icon: "",
-        },
-      ],
+      drop: null,
     },
   ];
   /**
@@ -127,10 +109,9 @@ const Navbar = () => {
    * handleMouseEnter, si tenemos un timeout corriendo lo anulamos porque estaremos de nuevo en el drop
    * @param {*} index
    */
-  const handleMouseEnter = (index) => {
-    if (timeOutRef) console.log("Anulo el timeOut");
-    clearTimeout(timeOutRef.current);
-    setOpenDrop(index);
+  const handleMouseEnter = (index, drop) => {
+    if (timeOutRef.current) clearTimeout(timeOutRef.current);
+    if (drop) setOpenDrop(index);
   };
   const handleMouseLeave = () => {
     console.log("Quiero ejecutar el timeOut");
@@ -143,7 +124,7 @@ const Navbar = () => {
       {/**Por ahora pongo el componente, puede que luego lo elimine y ponga aquí el codigo directamente*/}
       {/* <div className="logo">logo</div> */}
       <div className="brandname">
-        <Link to="/solutions">EduDomain</Link>
+        <Link to="/">EduDomain</Link>
       </div>
       <div className="btns">
         <div className="navigation">
@@ -160,7 +141,7 @@ const Navbar = () => {
                  * onMouseLeave si se va actualizamos el estado a null, no se cumple la logica para visualizar,
                  * no se muestra el dropDopwn
                  */
-                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseEnter={() => handleMouseEnter(index, drop)}
                 onMouseLeave={handleMouseLeave}
               >
                 {button}
@@ -172,7 +153,7 @@ const Navbar = () => {
           })}
         </div>
         <div className="side">
-          <a href="#" className="btn-demo">
+          <a href="/contact" className="btn-demo">
             Demandez une Démo
           </a>
 

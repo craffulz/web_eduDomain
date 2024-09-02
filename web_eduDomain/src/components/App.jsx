@@ -1,7 +1,7 @@
 import "../styles/App.scss";
 import Home from "./Pages/Home.tsx";
 import { Routes, Route } from "react-router-dom";
-import Solus from "./Pages/Solus.tsx";
+import Solus from "./Pages/Solus.jsx";
 const App = () => {
   return (
     <>

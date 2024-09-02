@@ -1,8 +1,11 @@
 import React from "react";
 import FromX from "../Animations/From-X";
+
+import "./Solutions.scss"
 import fondo_soluciones from "../../assets/fondos/fondo_soluciones.png";
 
 import { useSpring, animated } from "@react-spring/web";
+import { Link } from "react-router-dom";
 const Solutions = () => {
   /**
    * Array con los datos que contienen cada una de las soluciones
@@ -85,33 +88,33 @@ const Solutions = () => {
           return (
             <React.Fragment key={index}>
               <FromX>
-                <div
-                  className="cage"
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={handleMouseLeave}
+                <Link
+                  to="/solutions"
+                  style={{
+                    color: "$brand-color",
+                  }}
                 >
-                  <div className="animated">
-                    <img src={fondo_soluciones} alt="" />
+                  <div
+                    className="cage"
+                    onMouseEnter={() => handleMouseEnter(index)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="animated">
+                      <img src={fondo_soluciones} alt="" />
 
-                    {savoir === index && (
-                      <animated.div className="ensavoir" style={styles}>
-                        <a
-                          href="#"
-                          style={{
-                            color: "$brand-color",
-                          }}
-                        >
+                      {savoir === index && (
+                        <animated.div className="ensavoir" style={styles}>
                           <h3>En Savoir Plus</h3>
-                        </a>
-                      </animated.div>
-                    )}
-                  </div>
+                        </animated.div>
+                      )}
+                    </div>
 
-                  <div className="description">
-                    <h3>{solution.h3}</h3>
-                    <p>{solution.p}</p>
+                    <div className="description">
+                      <h3>{solution.h3}</h3>
+                      <p>{solution.p}</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </FromX>
             </React.Fragment>
           );
