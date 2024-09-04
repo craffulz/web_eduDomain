@@ -28,9 +28,9 @@ $box-color: rgb(240, 240, 240);
   }
 
   .cage {
-    position: relative;
+    
     width: 350px;
-    height: 300px;
+    height: 320px;
     margin: 40px 100px;
     border: 0.5px solid transparent;
     padding: 10px;
@@ -67,10 +67,9 @@ $box-color: rgb(240, 240, 240);
     h3 {
       color: $brand-color;
     }
-    p {
-      width: auto;
-      height: auto;
-      padding: 5px;
+    .dfk {
+      
+      
       color: #4a3f6c;
       font-weight: 450;
     }

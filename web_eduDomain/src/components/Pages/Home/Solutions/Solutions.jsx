@@ -111,7 +111,7 @@ const Solutions = () => {
 
                     <div className="description">
                       <h3>{solution.h3}</h3>
-                      <p>{solution.p}</p>
+                      <p className="dfk">{solution.p}</p>
                     </div>
                   </div>
                 </Link>

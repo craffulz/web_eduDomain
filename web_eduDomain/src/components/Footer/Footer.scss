@@ -1,0 +1,80 @@
+$back-color: rgb(255, 255, 255);
+$navbar-color: rgb(219, 216, 216);
+$banner-background: url("../assets/portada/biblio.jpg");
+$solution-background: url("../assets/fondos/fondo_soluciones.png");
+$cage-background: rgb(227, 194, 227);
+$brand-color: #772953;
+$solution-background: #f0e1e9;
+$title-font-color: white;
+$box-color: rgb(240, 240, 240);
+
+.footer {
+  display: block;
+  flex-direction: column;
+  color: $brand-color;
+  a {
+    text-decoration: none;
+  }
+
+  .first * {
+    margin: 5px;
+  }
+  display: flex;
+  flex-direction: column;
+
+  padding: 50px 200px;
+  background-color: #c0a4c0;
+  .first {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 20px;
+    h3 {
+      color: $brand-color;
+    }
+    span {
+      margin: 0px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 20px;
+    }
+
+    .fast-links {
+      color: $brand-color;
+      a {
+        text-decoration: none;
+      }
+      display: flex;
+      flex-direction: column;
+      padding: 0px 20px;
+    }
+    .legal {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 20px;
+    }
+  }
+
+  .second {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    justify-content: center;
+
+    .copy-right {
+      color: $brand-color;
+    }
+    .social-media {
+      display: flex;
+      padding: 0px 20px;
+      a {
+        margin: 0px 10px;
+        color: $brand-color;
+      }
+    }
+  }
+}

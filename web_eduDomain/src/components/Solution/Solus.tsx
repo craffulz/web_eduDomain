@@ -1,7 +1,7 @@
 import React from "react";
 
 import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
+import Footer from "../Footer/Footer.jsx";
 import "./Solus.scss";
 
 import { motion } from "framer-motion";
@@ -18,8 +18,8 @@ const Solus = ({ background, solution }) => {
                 // eslint-disable-next-line react/prop-types
                 key={background.alt}
                 className="sketch"
-                initial={{ opacity: 0, scale: 0.3, height: 0 }}
-                whileInView={{ opacity: 1, scale: 1, height: "auto" }}
+                initial={{ opacity: 0, scale: 0.3 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
@@ -33,7 +33,6 @@ const Solus = ({ background, solution }) => {
             );
           })}
         </div>
-
         <div className="ground">
           <div className="document">
             <div className="header">
@@ -48,8 +47,8 @@ const Solus = ({ background, solution }) => {
               </motion.div>
               <motion.div
                 className="description"
-                initial={{ x: -1200, height: 0, scale: 0.6 }}
-                whileInView={{ x: 0, height: "160px", scale: 1 }}
+                initial={{ x: -200, scale: 0.6 }}
+                whileInView={{ x: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.9 }}
               >
@@ -64,47 +63,48 @@ const Solus = ({ background, solution }) => {
                 </motion.div>
               </motion.div>
             </div>
+            {solution.explanation.map(
+              ({ media, description }, index: number) => {
+                return (
+                  <React.Fragment key={index}>
+                    <div className="explaining">
+                      <motion.div
+                        className="screenshot"
+                        initial={{ y: 300, scale: 0.5 }}
+                        whileInView={{
+                          y: 0,
+                          scale: 1,
+                        }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1.2 }}
+                      >
+                        {typeof media === "string" ? (
+                          <video src={media} muted loop autoPlay={true} />
+                        ) : (
+                          <img src={media.img} alt={media.alt} />
+                        )}
+                      </motion.div>
 
-            {solution.explanation.map(({ media, description }, index: number) => {
-              return (
-                <React.Fragment key={index}>
-                  <div className="explaining">
-                    <motion.div
-                      className="screenshot"
-                      initial={{ y: 300, scale: 0.5 }}
-                      whileInView={{
-                        y: 0,
-                        scale: 1,
-                      }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.2 }}
-                    >
-                      {typeof media === "string" ? (
-                        <video src={media} muted loop autoPlay={true} />
-                      ) : (
-                        <img src={media.img} alt={media.alt} />
-                      )}
-                    </motion.div>
+                      <motion.div
+                        className="description"
+                        initial={{ x: 200, scale: 0.6 }}
+                        whileInView={{ x: 0, scale: 1 }}
+                        transition={{ duration: 0.9 }}
+                      >
+                        <div className="paragraph">
+                          <h3>{description.h3}</h3>
+                          <p>{description.p}</p>
+                        </div>
+                      </motion.div>
+                    </div>
+                  </React.Fragment>
+                );
+              }
+            )}
 
-                    <motion.div
-                      className="description"
-                      initial={{ x: 200, height: 0, scale: 0.6 }}
-                      whileInView={{ x: 0, scale: 1 }}
-                      transition={{ duration: 0.9 }}
-                    >
-                      <div className="paragraph">
-                        <h3>{description.h3}</h3>
-                        <p>{description.p}</p>
-                      </div>
-                    </motion.div>
-                  </div>
-                </React.Fragment>
-              );
-            })}
+            
           </div>
-
-          <Footer />
-        </div>
+        </div><Footer />
       </div>
     </>
   );

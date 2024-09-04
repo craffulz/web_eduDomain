@@ -34,6 +34,7 @@ const Navbar = () => {
           dButton: "Patrimoine",
           dButtonDesc: "Gestion du patrimoine immobilier",
           icon: "fa-solid fa-building",
+          route: '/patrimoine'
         },
         {
           dButton: "Clients",
@@ -64,11 +65,11 @@ const Navbar = () => {
     },
     {
       button: "Support",
-      drop: {
+      drop: [{
         dButton: "Presentielle",
         dButtonDesc: "Formation interne",
         icon: "fa-solid fa-person-walking-arrow-right",
-      },
+      }],
     },
     {
       button: "Formation",
@@ -130,7 +131,7 @@ const Navbar = () => {
       {/**Por ahora pongo el componente, puede que luego lo elimine y ponga aquí el codigo directamente*/}
       {/* <div className="logo">logo</div> */}
       <div className="brandname">
-        <Link to="/">EduDomain</Link>
+        <Link to="/#hero">EduDomain</Link>
       </div>
       <div className="btns">
         <div className="navigation">

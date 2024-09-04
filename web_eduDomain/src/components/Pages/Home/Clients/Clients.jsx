@@ -48,7 +48,7 @@ const Clients = () => {
     cssEase: "linear",
     pauseOnHover: false, 
     swipe: false,
-    
+    arrows: false,
   };
 
   return (

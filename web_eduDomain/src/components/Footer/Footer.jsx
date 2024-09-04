@@ -1,6 +1,15 @@
-import React from "react";
+import "./Footer.scss"
 
 const Footer = () => {
+  // const contact = {
+  //   adress: {
+  //     rue: "Rue Mohammed V, 28, CP 90235",
+  //     ville: "Casablanca, Morocco",
+  //   },
+  //   tel: "956 456 235",
+  //   email: "Bayanesolution@bayane.com",
+  // };
+
   return (
     <>
       <div className="footer">
@@ -13,20 +22,20 @@ const Footer = () => {
             </div>
             <div className="tel">956 456 235</div>
             <div className="email">Bayanesolution@bayane.com</div>
-            <a href="#">Contactez-nous</a>
+            <a href="/contact">Contactez-nous</a>
           </div>
           <div className="fast-links">
             <h3>Liens rapides</h3>
             <a href="#">Solutions</a>
             <a href="#">Support</a>
             <a href="#">Formation</a>
-            <a href="#">Nos Clients</a>
+            <a href="/clients">Nos Clients</a>
             <a href="#">Qui sommes-nous</a>
           </div>
           <div className="legal">
             <h3>Legal</h3>
             <a href="#">Confidentialité</a>
-            <a href="#">Conditions d'utilisation</a>
+            <a href="#">Conditions d&apos;utilisation</a>
             <a href="#">Mentions légales</a>
             <a href="#">Copyright</a>
             <a href="#">Marque</a>

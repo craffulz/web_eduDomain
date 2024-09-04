@@ -1,8 +1,22 @@
 /* Estilos generales para la sección hero */
+
+$back-color: rgb(255, 255, 255);
+$navbar-color: rgb(219, 216, 216);
+$banner-background: url("../assets/portada/biblio.jpg");
+$solution-background: url("../assets/fondos/fondo_soluciones.png");
+$cage-background: rgb(227, 194, 227);
+$brand-color: #772953;
+$solution-background: #f0e1e9;
+$title-font-color: white;
+$box-color: rgb(240, 240, 240);
+
+$formbackcolor: rgb(56, 55, 55);
+$selectbackcolor: rgb(83, 77, 77);
+$formcolor: #cc8bae;
+$boxshadow: 1px 2px 10px #3a165e;
 .hero {
   position: relative;
   width: 100%;
-
 }
 
 /* Estilo para cada slide dentro del hero */
@@ -28,7 +42,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #772953;
+  color: #300000;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 1px 2px 10px #a692ba;
@@ -38,7 +52,7 @@
 }
 
 .hero-text h1 {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 700;
 
   margin-bottom: 1rem;
@@ -46,7 +60,7 @@
 }
 
 .hero-text p {
-  font-size: 20px;
+  font-size: 37px;
   font-weight: 500;
   margin-bottom: 1.5rem;
   line-height: 1.5;
@@ -185,7 +199,6 @@
 }
 
 .btn-demo {
-
   display: block;
 
   font-size: 18px;
@@ -197,12 +210,10 @@
   border-radius: 10px;
   text-decoration: none;
   background-color: #994070;
-
-  
 }
 .btn-demo:hover {
-    cursor: pointer;
-    transform: scale(1.01);
+  cursor: pointer;
+  transform: scale(1.01);
 
-    box-shadow: 1px 2px 15px #a692ba;
-  }
+  box-shadow: 1px 2px 15px #a692ba;
+}
