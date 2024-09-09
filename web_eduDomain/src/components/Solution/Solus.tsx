@@ -45,7 +45,7 @@ const Solus = ({ background, solution }) => {
         </div>
         <div className="ground">
           <div className="document">
-            <div className="header" id="header">
+            <div className="encabezado" >
               <motion.div
                 className="title"
                 initial={{ x: 100, scale: 0 }}
@@ -63,7 +63,7 @@ const Solus = ({ background, solution }) => {
                 transition={{ duration: 0.9 }}
               >
                 <motion.div
-                  className="paragraph"
+                  className="paragrapho"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -96,7 +96,7 @@ const Solus = ({ background, solution }) => {
                       </motion.div>
 
                       <motion.div
-                        className="description"
+                        className="descriptione"
                         initial={{ x: 200, scale: 0.6 }}
                         whileInView={{ x: 0, scale: 1 }}
                         transition={{ duration: 0.9 }}
