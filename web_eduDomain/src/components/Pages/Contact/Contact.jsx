@@ -2,9 +2,10 @@ import "./Contact.scss";
 
 import Form from "../../Form/Form.jsx";
 
-import Navbar from "../../Navbar/Navbar";
+
 
 import Footer from "../../Footer/Footer.jsx";
+import NavbarPicker from "../../NavbarPicker/NavbarPicker.jsx";
 
 const Contact = () => {
   const contact = {
@@ -18,7 +19,7 @@ const Contact = () => {
 
   return (
     <>
-      <Navbar />
+      <NavbarPicker />
       <div className="documento">
         <div className="title">
           <h1>INNOVONS ENSEMBLE !</h1>

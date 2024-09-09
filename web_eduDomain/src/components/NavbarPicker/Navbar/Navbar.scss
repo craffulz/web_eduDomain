@@ -9,8 +9,7 @@ $title-font-color: white;
 $box-color: rgb(240, 240, 240);
 
 .navbar {
-  @media (width < 600px) {
-  }
+ 
 
   a {
     text-decoration: none;
@@ -23,7 +22,6 @@ $box-color: rgb(240, 240, 240);
   flex-direction: row;
   flex-shrink: 0;
 
-  
   align-items: center;
 
   padding: 0px 200px;
@@ -45,7 +43,7 @@ $box-color: rgb(240, 240, 240);
     flex-grow: 1;
     flex-shrink: 0;
 
-    justify-content: space-between  ;
+    justify-content: space-between;
     color: #4a3f6c;
     font-weight: 500;
 
@@ -137,6 +135,17 @@ $box-color: rgb(240, 240, 240);
           box-shadow: 1px 2px 15px #a692ba;
         }
       }
+    }
+  }
+
+  @media (width < 1270px) {
+    margin: 0px 0px;
+    padding: 0px 20px;
+  }
+
+  @media (width < 920px) {
+    .btns {
+     display: none;
     }
   }
 }

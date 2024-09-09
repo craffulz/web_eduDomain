@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../NavbarPicker/Navbar/Navbar.jsx";
 import Footer from "../Footer/Footer.jsx";
 import "./Solus.scss";
 
 import { motion } from "framer-motion";
+import NavbarPicker from "../NavbarPicker/NavbarPicker.jsx";
 
 const Solus = ({ background, solution }) => {
   useEffect(() => {
@@ -19,7 +20,7 @@ const Solus = ({ background, solution }) => {
 
   return (
     <>
-      <Navbar />
+      <NavbarPicker />
       <div className="solus">
         <div className="background">
           {background.map(({ ...background }) => {

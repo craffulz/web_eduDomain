@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import Navbar from "../../Navbar/Navbar.jsx";
+
 import Hero from "./Hero/Hero.jsx";
 import Solutions from "./Solutions/Solutions.jsx";
 import Features from "./Features/Features.jsx";
 import Footer from "../../Footer/Footer.jsx";
 import Clients from "./Clients/Clients.jsx";
+import NavabarPicker from "../../NavbarPicker/NavbarPicker.jsx";
 
 const Home = () => {
   const location = useLocation();
@@ -24,7 +25,7 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
+      <NavabarPicker />
       <Hero />
       <Solutions />
       <Features />

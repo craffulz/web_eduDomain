@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import "./Navbar.scss";
 
 import { useRef, useState } from "react";
-import Dropdown from "../Dropdown/Dropdown";
+import Dropdown from "../../Dropdown/Dropdown";
 
 import { Link } from "react-router-dom";
 
@@ -10,7 +11,7 @@ import { Link } from "react-router-dom";
  * En ella aparecerán el logo, el nombre de la marca y los diferentes botones para
  * navegar por la pagina web. Tambien el cambio de tema.
  */
-const Navbar = () => {
+const Navbar = ({navbarButtons}) => {
   console.log("Navbar Mounts");
   /**
    * Creamos un estado para manejar la apertura y cierre de los dropdowns
@@ -21,65 +22,7 @@ const Navbar = () => {
    * la que no hay ni boton ni dropDown
    */
   const timeOutRef = useRef(null);
-  /**
-   * Definimos aqui los botones que tendrá nuestra navbar.
-   * A parte de los nombres, debemos de indicar que es lo que se mostrara dentro de cada
-   * dropdown.
-   */
-  const navbarButtons = [
-    {
-      button: "Solutions",
-      drop: [
-        {
-          dButton: "Patrimoine",
-          dButtonDesc: "Gestion du patrimoine immobilier",
-          icon: "fa-solid fa-building",
-          route: "/patrimoine#navbar",
-        },
-        {
-          dButton: "Clients",
-          dButtonDesc: "Gestion des clients et des contrats",
-          icon: "fa-solid fa-people-arrows",
-        },
-        {
-          dButton: "Reclamations",
-          dButtonDesc: "Gestion des réclamations",
-          icon: "fa-solid fa-building-circle-exclamation",
-        },
-        {
-          dButton: "Demande Longement",
-          dButtonDesc: "Interface de demande de logement pour étudiants",
-          icon: "fa-solid fa-check",
-        },
-        {
-          dButton: "Reports",
-          dButtonDesc: "Tableau de bord et reporting",
-          icon: "fa-solid fa-chart-line",
-        },
-        {
-          dButton: "Consomation",
-          dButtonDesc: "Gestion des index de consommation",
-          icon: "fa-solid fa-hand-holding-dollar",
-        },
-      ],
-    },
-    {
-      button: { button: "Support", route: "/support" },
-      drop: null,
-    },
-    {
-      button: {button: "Formation", route: "/formation"},
-      drop: null,
-    },
-    {
-      button: { button: "Clients", route: "/#clients" },
-      drop: null,
-    },
-    {
-      button: { button: "Contactez-nous", route: "/contact" },
-      drop: null,
-    },
-  ];
+
   /**
    * handleDropDown se encarga de referir el index en el que nos encontramos al hacer Click.
    * Si hacemos click se pasa el index del boton sobre el que nos encontramos y actualizamos el
@@ -105,7 +48,7 @@ const Navbar = () => {
     }, 50);
   };
   return (
-    <div className="navbar" id='navbar'>
+    <div className="navbar" id="navbar">
       {/**Por ahora pongo el componente, puede que luego lo elimine y ponga aquí el codigo directamente*/}
       {/* <div className="logo">logo</div> */}
       <div className="brandname">
@@ -154,8 +97,6 @@ const Navbar = () => {
           <a href="/contact" className="btn-demo">
             Demandez une Démo
           </a>
-
-          {/**Aquí puede que introduzcamos otro componente para cambiar el modo de la página web */}
         </div>
       </div>
     </div>

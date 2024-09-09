@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
-import Navbar from "../Navbar/Navbar.jsx";
+
 import Footer from "../Footer/Footer.jsx";
 import "./InfoPage.scss";
 import { Link } from "react-router-dom";
+import NavbarPicker from "../NavbarPicker/NavbarPicker.jsx";
 
 const InfoPage = ({header, supports}) => {
   return (
     <>
-      <Navbar />
+      <NavbarPicker />
       <div className="support">
         <div className="document">
           <div className="header">
