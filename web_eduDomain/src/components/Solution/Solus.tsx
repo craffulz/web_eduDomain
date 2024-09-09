@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import Navbar from "../NavbarPicker/Navbar/Navbar.jsx";
+
 import Footer from "../Footer/Footer.jsx";
 import "./Solus.scss";
 

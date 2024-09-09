@@ -31,12 +31,14 @@ const LiteNavbar = ({ navbarButtons }) => {
       {openLiteDrop && (
         <div className="drop">
           {navbarButtons.map(({ button, drop }, index) => (
-            <div key={index} className="butt">
+            <div key={index} className="butt" onClick={handleClickOnDrop}>
               {typeof button === "string" ? (
                 <>
-                  {button}
+                  <div className="button">{button}</div>
+
                   {openDrop && (
                     <Dropdown
+                      className="dropsolu"
                       button={button}
                       drop={drop}
                       onClick={handleClickOnDrop}
@@ -44,7 +46,9 @@ const LiteNavbar = ({ navbarButtons }) => {
                   )}
                 </>
               ) : (
-                <Link to={button.route}>{button.button}</Link>
+                <Link to={button.route}>
+                  <div className="button">{button.button}</div>
+                </Link>
               )}
             </div>
           ))}
