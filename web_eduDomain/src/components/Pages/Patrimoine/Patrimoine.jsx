@@ -1,4 +1,5 @@
 import Solus from "../../Solution/Solus.tsx";
+import { motion } from "framer-motion";
 
 import res_sketch from "../../../assets/solutions/res_sketch.jpg";
 import res_fucsia_sketch from "../../../assets/solutions/res_sketch_little.png";
@@ -18,7 +19,12 @@ const Patrimoine = () => {
   const solution = {
     title: "Patrimoine",
     intro: `Le module
-                    <motion.div className="patrimoine"> Patrimoine </motion.div>
+                    ${(
+                      <motion.div className="patrimoine">
+                        {" "}
+                        Patrimoine{" "}
+                      </motion.div>
+                    )}
                     offre une solution intégrale et efficace pour la gestion des
                     différentes résidences que nous gérons, permettant un
                     contrôle centralisé et simplifié de toutes les propriétés.
@@ -38,15 +44,15 @@ const Patrimoine = () => {
         description: {
           h3: "Hiérarchie Résidentielle ",
           p: `Le module Patrimoine offre un système de vues hiérarchiques
-                        pour l&apos;organisation des résidences. Cela permet une
+                        pour l'organisation des résidences. Cela permet une
                         meilleure gestion et visualisation de la structure
                         organisationnelle des propriétés, facilitant
-                        l&apos;identification et l&apos;accès aux informations
+                        l'identification et l'accès aux informations
                         relatives à chaque résidence. Grâce à ces vues
                         hiérarchiques, les utilisateurs peuvent naviguer facilement
                         entre les différentes catégories, niveaux ou regroupements
                         de résidences, ce qui optimise la gestion du patrimoine et
-                        améliore l&apos;efficacité dans la prise de décisions.`,
+                        améliore l'efficacité dans la prise de décisions.`,
         },
       },
       {
@@ -58,7 +64,7 @@ const Patrimoine = () => {
                         détaillées de chaque résidence, permettant un contrôle plus
                         précis sur les actifs et leur état. De plus, il facilite la
                         génération de rapports personnalisés et le suivi des
-                        modifications ou mises à jour au sein de l&apos;inventaire
+                        modifications ou mises à jour au sein de l'inventaire
                         des résidences, contribuant ainsi à une meilleure
                         organisation et à une planification stratégique optimisée.`,
         },
@@ -70,7 +76,7 @@ const Patrimoine = () => {
         },
         description: {
           h3: "Transfert de Données ",
-          p: `La fonctionnalité d&apos;importation et d&apos;exportation
+          p: `La fonctionnalité d'importation et d'exportation
                         permet aux administrateurs de gérer les données en masse,
                         facilitant les mises à jour périodiques et le transfert de
                         données entre systèmes. Le système supporte plusieurs

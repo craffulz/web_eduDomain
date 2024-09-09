@@ -1,10 +1,10 @@
 import React from "react";
 import FromX from "../../../Animations/From-X";
 
-import "./Solutions.scss"
+import "./Solutions.scss";
 import fondo_soluciones from "../../../../assets/fondos/fondo_soluciones.png";
 
-import { useSpring, animated } from "@react-spring/web";
+import { useSpring } from "@react-spring/web";
 import { Link } from "react-router-dom";
 const Solutions = () => {
   /**
@@ -53,7 +53,7 @@ const Solutions = () => {
   /**
    * Creamos un state un momento para una cosa luego vemos si se queda o no
    */
-  const [savoir, setSavoir] = React.useState(0);
+  // const [savoir, setSavoir] = React.useState(0);
 
   /**
    * Creamos el useSpring para el efecto de la animacion para que nos salga un link etc
@@ -64,8 +64,8 @@ const Solutions = () => {
     from: { opacity: 0 },
   }));
 
-  const handleMouseEnter = (index) => {
-    setSavoir(index);
+  const handleMouseEnter = () => {
+    // setSavoir(index);
     console.log("mouse enter");
     console.log(styles.opacity);
     api.start({ opacity: 0.5, ease: "easeIn" });
@@ -96,17 +96,17 @@ const Solutions = () => {
                 >
                   <div
                     className="cage"
-                    onMouseEnter={() => handleMouseEnter(index)}
+                    onMouseEnter={() => handleMouseEnter()}
                     onMouseLeave={handleMouseLeave}
                   >
-                    <div className="animated">
-                      <img src={fondo_soluciones} alt="" />
+                    <div className="animated-cage">
+                      <div className="img"><img src={fondo_soluciones} alt="screenshot of module patrimoin" /></div>
 
-                      {savoir === index && (
+                      {/* {savoir === index && (
                         <animated.div className="ensavoir" style={styles}>
                           <h3>En Savoir Plus</h3>
                         </animated.div>
-                      )}
+                      )} */}
                     </div>
 
                     <div className="description">

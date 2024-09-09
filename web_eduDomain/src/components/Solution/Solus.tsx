@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer.jsx";
@@ -7,6 +7,16 @@ import "./Solus.scss";
 import { motion } from "framer-motion";
 
 const Solus = ({ background, solution }) => {
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <>
       <Navbar />
@@ -35,7 +45,7 @@ const Solus = ({ background, solution }) => {
         </div>
         <div className="ground">
           <div className="document">
-            <div className="header">
+            <div className="header" id="header">
               <motion.div
                 className="title"
                 initial={{ x: 100, scale: 0 }}
@@ -101,10 +111,9 @@ const Solus = ({ background, solution }) => {
                 );
               }
             )}
-
-            
           </div>
-        </div><Footer />
+        </div>
+        <Footer />
       </div>
     </>
   );

@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 // eslint-disable-next-line no-unused-vars
-
+import "./Features.scss";
 
 const Features = () => {
   console.log("Features mounted");
@@ -69,7 +69,7 @@ const Features = () => {
             key={index}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
-            style={{ position: "relative" }}
+            style={{ position: 'relative' }}
           >
             {/* Icono y título */}
             <motion.div
@@ -91,6 +91,7 @@ const Features = () => {
 
             {/* Párrafo oculto que se muestra al hacer hover */}
             <motion.div
+              className="paragraph"
               initial={{ opacity: 0 }}
               animate={{
                 opacity: hoveredIndex === index ? 1 : 0,
@@ -100,7 +101,7 @@ const Features = () => {
               style={{
                 display: hoveredIndex === index ? "block" : "none",
                 position: "absolute",
-                
+
                 transform: "translate(-50%, -50%)",
               }}
             >

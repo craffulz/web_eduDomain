@@ -34,7 +34,7 @@ const Navbar = () => {
           dButton: "Patrimoine",
           dButtonDesc: "Gestion du patrimoine immobilier",
           icon: "fa-solid fa-building",
-          route: '/patrimoine'
+          route: "/patrimoine#header",
         },
         {
           dButton: "Clients",
@@ -64,34 +64,12 @@ const Navbar = () => {
       ],
     },
     {
-      button: "Support",
-      drop: [{
-        dButton: "Presentielle",
-        dButtonDesc: "Formation interne",
-        icon: "fa-solid fa-person-walking-arrow-right",
-      }],
+      button: { button: "Support", route: "/support" },
+      drop: null,
     },
     {
-      button: "Formation",
-      drop: [
-        {
-          dButton: "Presentielle",
-          dButtonDesc: "Formation interne",
-          icon: "fa-solid fa-person-walking-arrow-right",
-        },
-
-        {
-          dButton: "On-Ligne",
-          dButtonDesc: "Formation On-Ligne",
-          icon: "fa-solid fa-globe",
-        },
-
-        {
-          dButton: "Documentation",
-          dButtonDesc: "Formation avec notre docu",
-          icon: "fa-solid fa-book",
-        },
-      ],
+      button: {button: "Formation", route: "/formation"},
+      drop: null,
     },
     {
       button: { button: "Clients", route: "/#clients" },

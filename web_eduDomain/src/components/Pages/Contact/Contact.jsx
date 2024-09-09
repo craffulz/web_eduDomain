@@ -19,7 +19,7 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <div className="document">
+      <div className="documento">
         <div className="title">
           <h1>INNOVONS ENSEMBLE !</h1>
           <h3>-Nous sommes à votre écoute pour concrétiser vos projets-</h3>

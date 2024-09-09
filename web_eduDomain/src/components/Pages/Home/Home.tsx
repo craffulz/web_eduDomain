@@ -12,7 +12,7 @@ const Home = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Detectar y manejar el desplazamiento cuando la URL cambia
+    
     const hash = location.hash;
     if (hash) {
       const element = document.querySelector(hash);
