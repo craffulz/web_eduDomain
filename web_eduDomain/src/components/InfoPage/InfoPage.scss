@@ -63,26 +63,78 @@ $boxshadow: 1px 2px 10px #3a165e;
         box-shadow: $boxshadow;
 
         h3,
-        p
-        {
+        p {
           margin-bottom: 8px;
-          
         }
-        h3{
-            color: $brand-color;
+        h3 {
+          color: $brand-color;
         }
 
         .icon {
-            margin-right: 30px;
-            align-content: center;
+          margin-right: 30px;
+          align-content: center;
         }
         .data {
-            align-content: center;
+          align-content: center;
           .icon {
             display: flex;
             justify-content: flex-end;
           }
         }
+      }
+    }
+  }
+  @media (width <= 1440px) {
+    .document {
+      margin-inline: 0px;
+    }
+    padding: 0px 160px;
+  }
+
+  @media (width <= 1024px) {
+    padding: 0px;
+  }
+
+  @media (width <= 768px) {
+    .document .types .cage {
+      padding: 15px;
+    }
+  }
+
+  @media (width <= 425px) {
+    margin: 30px 0px;
+    .document {
+      box-shadow: none;
+
+      p {
+        text-align: center;
+      }
+
+      .types {
+        margin: 0px;
+        .cage {
+          margin: 10px 10px;
+
+          img {
+            width: 50px;
+          }
+
+          p {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+  @media (width <= 375px) {
+    .document .types .cage {
+      flex-direction: column;
+
+      .icon {
+        display: flex;
+        margin: 0px 0px 5px;
+        justify-content: flex-end;
       }
     }
   }

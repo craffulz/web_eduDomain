@@ -34,16 +34,17 @@ const LiteNavbar = ({ navbarButtons }) => {
             <div key={index} className="butt" onClick={handleClickOnDrop}>
               {typeof button === "string" ? (
                 <>
-                  <div className="button">{button}</div>
-
-                  {openDrop && (
-                    <Dropdown
-                      className="dropsolu"
-                      button={button}
-                      drop={drop}
-                      onClick={handleClickOnDrop}
-                    />
-                  )}
+                  <div className="button">
+                    {button}
+                    {openDrop && (
+                      <Dropdown
+                        className="dropsolu"
+                        button={button}
+                        drop={drop}
+                        onClick={handleClickOnDrop}
+                      />
+                    )}
+                  </div>
                 </>
               ) : (
                 <Link to={button.route}>

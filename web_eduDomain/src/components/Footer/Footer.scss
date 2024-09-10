@@ -10,10 +10,10 @@ $box-color: rgb(240, 240, 240);
 
 .footer {
   display: flex;
-
+flex-direction: column;
   overflow: hidden;
 
-  flex-direction: column;
+  
   color: $brand-color;
   a {
     text-decoration: none;
@@ -78,6 +78,15 @@ $box-color: rgb(240, 240, 240);
         margin: 0px 10px;
         color: $brand-color;
       }
+    }
+  }
+
+  @media (width < 1270px) {  
+   padding-inline: 20px;
+  }
+  @media (width <= 650px) {
+    .first {
+      flex-direction: column;
     }
   }
 }
