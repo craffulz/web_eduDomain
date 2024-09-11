@@ -29,7 +29,7 @@ const NavbarPicker = () => {
           dButton: "Patrimoine",
           dButtonDesc: "Gestion du patrimoine immobilier",
           icon: "fa-solid fa-building",
-          route: "/patrimoine#navbar",
+          route: "/patrimoine",
         },
         {
           dButton: "Clients",
