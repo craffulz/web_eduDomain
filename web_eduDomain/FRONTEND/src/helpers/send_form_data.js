@@ -1,5 +1,5 @@
 const sendData = async (data) => {
-  const response = await fetch("http://localhost:3000/form", {
+  const response = await fetch("api/form/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json", // Encabezado que indica que el cuerpo es JSON

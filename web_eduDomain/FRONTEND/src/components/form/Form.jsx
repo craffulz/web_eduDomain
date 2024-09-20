@@ -26,7 +26,7 @@ const Form = () => {
     // Aquí puedes manejar el envío del formulario, como enviar los datos a un servidor
 
     console.log(formData);
-    await sendData(formData);
+    sendData(formData);
   };
 
   // Generar las franjas horarias
