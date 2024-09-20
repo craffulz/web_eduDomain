@@ -1,0 +1,321 @@
+$back-color: rgb(255, 255, 255);
+$navbar-color: rgb(219, 216, 216);
+$banner-background: url("../assets/portada/biblio.jpg");
+$solution-background: url("../assets/fondos/fondo_soluciones.png");
+$cage-background: rgb(227, 194, 227);
+$brand-color: #772953;
+$solution-background: #f0e1e9;
+$title-font-color: white;
+$box-color: rgb(240, 240, 240);
+
+$boxshadow: 1px 2px 10px #3a165e;
+
+.solus {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  box-sizing: border-box;
+
+  .background {
+    display: block;
+    align-self: center;
+
+    position: absolute;
+    z-index: 1;
+    box-sizing: border-box;
+    .sketch {
+      margin-left: 700px;
+    }
+
+    .sketch-2 {
+      margin-left: 800px;
+    }
+  }
+
+  .ground {
+    z-index: 3;
+
+    .document {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 0;
+
+      margin: 0px 200px;
+      box-sizing: border-box;
+
+      .encabezado {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        margin-top: 180px;
+        margin-bottom: 90px;
+
+        .title {
+          color: #772953;
+          font-size: 50px;
+          text-shadow: 1px 20px 10px rgb(166, 146, 186, 2);
+        }
+
+        .description {
+          display: flex;
+          flex-direction: column;
+
+          .paragrapho {
+            display: flex;
+            flex-direction: column;
+
+            margin-top: 70px;
+            max-width: 800px;
+
+            color: #1c1f1c;
+            border-radius: 20px;
+            background-color: rgb(250, 238, 238);
+            box-shadow: 1px 2px 10px #3a165e;
+            padding: 20px;
+
+            font-size: 21px;
+
+            .patrimoine {
+              display: inline;
+            }
+          }
+        }
+      }
+      .explaining {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        justify-content: center;
+
+        align-items: flex-end;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        .screenshot {
+          margin-bottom: 70px;
+
+          display: flex;
+          align-self: center;
+          object-fit: cover;
+
+          perspective: 3000px;
+          video,
+          img {
+            border-radius: 15px;
+            box-shadow: 1px 2px 10px #3a165e;
+
+            transform: rotateX(15deg) rotateY(15deg);
+            transition: transform 0.5s;
+
+            &:hover {
+              transform: rotateX(0deg) rotateY(0deg);
+              transition: transform 0.5s;
+            }
+          }
+        }
+        .descriptione {
+          width: 500px;
+          background-color: rgb(250, 238, 238);
+          color: #160d36;
+          border-radius: 20px;
+
+          box-shadow: 1px 2px 10px #3a165e;
+          padding: 20px;
+
+          .paragraph {
+            display: block;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (width <= 1770px) {
+    .document {
+      .explaining {
+        .screenshot {
+          img,
+          video {
+            width: 700px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  @media (width <= 1440px) {
+    .ground .document {
+      margin-inline: 100px;
+
+      .explaining .screenshot img,
+      video {
+        width: 700px;
+        height: auto;
+      }
+    }
+  }
+
+  @media (width <= 1300px) {
+    .ground .document {
+      margin-inline: 100px;
+
+      .explaining .screenshot {
+        img,
+        video {
+          width: 550px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  @media (width <= 1170px) {
+    .ground .document {
+      margin-inline: 100px;
+
+      .explaining {
+        gap: 0px;
+
+        flex-direction: column;
+        align-items: center;
+
+        padding: 50px 0px;
+
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.6);
+        box-shadow: 1px 2px 10px #a692ba;
+
+        .descriptione {
+          .paragraph h3 {
+            color: $brand-color;
+          }
+        }
+
+        .screenshot {
+          perspective: none;
+
+          img,
+          video {
+            width: 750px;
+            height: auto;
+
+            transform: rotateX(0deg) rotateY(0deg);
+          }
+        }
+      }
+    }
+  }
+
+  @media (width <= 994px) {
+    .ground .document {
+      margin-inline: 70px;
+
+      .explaining {
+        gap: 0px;
+
+        flex-direction: column;
+        align-items: center;
+
+        padding: 50px 0px;
+
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.6);
+        box-shadow: 1px 2px 10px #a692ba;
+
+        .descriptione {
+          .paragraph h3 {
+            color: $brand-color;
+          }
+        }
+
+        .screenshot {
+          perspective: none;
+
+          img,
+          video {
+            width: 650px;
+            height: auto;
+
+            transform: rotateX(0deg) rotateY(0deg);
+          }
+        }
+      }
+    }
+  }
+
+  @media (width <= 670px) {
+    .ground .document {
+      .encabezado {
+        .description {
+          font-size: 20px;
+
+          .paragrapho {
+            font-size: 20px;
+          }
+        }
+        .title {
+          font-size: 30px;
+        }
+      }
+
+      .explaining {
+        .screenshot {
+          img,
+          video {
+            width: 300px;
+            height: auto;
+          }
+        }
+
+        .descriptione {
+          width: 300px;
+
+          .paragraph {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+  @media (width <= 375px) {
+    margin-top: 0px;
+    .ground {
+      .document {
+        margin: 5px;
+        .encabezado {
+          margin-top: 80px;
+        }
+        .explaining {
+          margin: 5px;
+          .screenshot {
+            img,
+            video {
+              width: 250px;
+              height: auto;
+            }
+          }
+
+          .descriptione {
+            width: 200px;
+
+            .paragraph {
+              display: flex;
+              flex-direction: column;
+
+              p {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
