@@ -1,4 +1,8 @@
+/* eslint-disable no-undef */
 import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const sendEmail = (data) => {
   const { name, lastName, email, info, schedule } = data;
@@ -8,8 +12,8 @@ const sendEmail = (data) => {
     port: 587,
     secure: false, // true for port 465, false for other ports
     auth: {
-      user: "hamzachikriboudraa@gmail.com",
-      pass: "eelb dfcd dwvh nuws",
+      user: process.env.EMAIL,
+      pass: process.env.PWD,
     },
   });
 

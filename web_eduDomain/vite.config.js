@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:3000", // Dirección de tu backend Express
+        target: "https://hamzachikri.online", // Dirección de tu backend Express
         changeOrigin: true,
          // Quitar el prefijo "/api" en las peticiones
       },
