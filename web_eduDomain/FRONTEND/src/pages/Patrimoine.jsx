@@ -1,13 +1,13 @@
 import Solus from "../components/solution/Solus.tsx";
 import { motion } from "framer-motion";
 
-import res_sketch from "../assets/solutions/res_sketch.jpg";
-import res_fucsia_sketch from "../assets/solutions/res_sketch_little.png";
-import res_blue_sketch from "../assets/solutions/res_sketch_little2.png";
+import res_sketch from "../assets/solutions/res_sketch.webp";
+import res_fucsia_sketch from "../assets/solutions/res_sketch_little.webp";
+import res_blue_sketch from "../assets/solutions/res_sketch_little2.webp";
 
 import hierarchie_patrimoine from "../assets/solutions/video_patrimoine.mp4";
 import filtres_patrimoine from "../assets/solutions/filtres_patrimoine.mp4";
-import screen_patrimoine from "../assets/solutions/screen_patrimoine.png";
+import screen_patrimoine from "../assets/solutions/screen_patrimoine.webp";
 
 const Patrimoine = () => {
   const background = [

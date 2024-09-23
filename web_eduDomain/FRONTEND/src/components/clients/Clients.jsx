@@ -4,11 +4,11 @@ import "./Clients.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import chaabi from "../../assets/clients/chaabi.png";
-import ehc from "../../assets/clients/ehc.png";
-import fendary from "../../assets/clients/fendary.png";
-import maarifa from "../../assets/clients/maarifa.png";
-import ru from "../../assets/clients/ru.png";
+import chaabi from "../../assets/clients/chaabi.webp";
+import ehc from "../../assets/clients/ehc.webp";
+import fendary from "../../assets/clients/fendary.webp";
+import maarifa from "../../assets/clients/maarifa.webp";
+import ru from "../../assets/clients/ru.webp";
 
 const Clients = () => {
   const logos = [
@@ -46,7 +46,7 @@ const Clients = () => {
     speed: 10000,
     autoplaySpeed: 0,
     cssEase: "linear",
-    pauseOnHover: false, 
+    pauseOnHover: false,
     swipe: false,
     arrows: false,
   };
