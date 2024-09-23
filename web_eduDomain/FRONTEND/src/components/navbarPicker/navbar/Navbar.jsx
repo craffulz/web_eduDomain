@@ -11,13 +11,21 @@ import { Link } from "react-router-dom";
  * En ella aparecerán el logo, el nombre de la marca y los diferentes botones para
  * navegar por la pagina web. Tambien el cambio de tema.
  */
-const Navbar = ({navbarButtons}) => {
+const Navbar = ({ navbarButtons }) => {
   console.log("Navbar Mounts");
+  /**
+   * Probando estilos
+   */
+
+  /**Para controlar que el dropdown desaparece al pasar a otro boton */
+  const [indexer, setIndexer] = useState(null);
   /**
    * Creamos un estado para manejar la apertura y cierre de los dropdowns
    */
   const [openDrop, setOpenDrop] = useState(null);
-  /**Creamos un useRef para anular el timeOut cuando pasemos al Droopdown y que asi
+  /**Vamos a probar una cosa para el estilo del dropdown */
+
+  /**Creamos un useRef para anular el timeOut cuando pasemos al Dropdown y que asi
    * no desaparezca el dropDropdown cuando pasemos el cursor por alguna ubicacion en
    * la que no hay ni boton ni dropDown
    */
@@ -38,11 +46,12 @@ const Navbar = ({navbarButtons}) => {
    * @param {*} index
    */
   const handleMouseEnter = (index, drop) => {
-    if (timeOutRef.current) clearTimeout(timeOutRef.current);
+    if (index === indexer) clearTimeout(timeOutRef.current);
     if (drop) setOpenDrop(index);
   };
   const handleMouseLeave = () => {
     console.log("Quiero ejecutar el timeOut");
+
     timeOutRef.current = setTimeout(() => {
       setOpenDrop(null);
     }, 50);
@@ -62,7 +71,6 @@ const Navbar = ({navbarButtons}) => {
               <div
                 className="btn"
                 key={index}
-                ref={timeOutRef}
                 onClick={() => handleDropDown(index)}
                 /**
                  * onMouseEnter si esta encima actualizamos el estado al index y renderizamos si es igual
@@ -70,12 +78,16 @@ const Navbar = ({navbarButtons}) => {
                  * onMouseLeave si se va actualizamos el estado a null, no se cumple la logica para visualizar,
                  * no se muestra el dropDopwn
                  */
-                onMouseEnter={() => handleMouseEnter(index, drop)}
+                onMouseEnter={() => {
+                  setIndexer(index);
+                  handleMouseEnter(index, drop);
+                }}
                 onMouseLeave={handleMouseLeave}
               >
                 {typeof button === "string" ? (
                   <>
                     {button}
+
                     {openDrop === index && drop.length > 0 && (
                       <Dropdown
                         className="drop"
