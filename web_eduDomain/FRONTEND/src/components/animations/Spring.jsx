@@ -2,6 +2,7 @@ import { useSpring, animated, useInView } from "@react-spring/web";
 
 import "./Spring.scss";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Spring = () => {
   const [ref, springs] = useInView(() => ({
@@ -36,7 +37,7 @@ const Spring = () => {
   return (
     <animated.div className="final" ref={ref} style={springs}>
       <animated.div className="botona">
-        <Button>Solution Precedent</Button>
+        <button>Solution Précédent &lt;&lt;&lt;</button>
       </animated.div>
       <div className="mess">
         <p>
@@ -45,11 +46,14 @@ const Spring = () => {
           personnalisée de toutes ses fonctionnalités, nous vous invitons à:
         </p>{" "}
         <animated.div className="demo-but" style={hdidan}>
-          <Button>Demandez une demo</Button>
+          <Link to="/contact">
+            {" "}
+            <Button>Demander une démo</Button>
+          </Link>
         </animated.div>
       </div>
       <animated.div className="botona">
-        <Button>Solution Suivant</Button>
+        <button>Solution Suivant &gt;&gt;&gt;</button>
       </animated.div>
     </animated.div>
   );

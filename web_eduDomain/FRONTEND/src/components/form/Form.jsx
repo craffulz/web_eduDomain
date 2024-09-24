@@ -1,9 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./Form.scss"; // Asegúrate de tener este archivo CSS
 
 import sendData from "../../helpers/send_form_data";
 
 const Form = () => {
+  const [submit, setSubmit] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -12,6 +16,11 @@ const Form = () => {
     schedule: "",
     info: "",
   });
+
+  /**Funcion para el boton de volver a rellenar el formulario */
+  const handleFormAgain = () => {
+    setSubmit(false);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,10 +32,23 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Aquí puedes manejar el envío del formulario, como enviar los datos a un servidor
-
-    console.log(formData);
+    /**Eviamos la informacion para mandar el e-mail */
     sendData(formData);
+    /**
+     * 0.1 Vaciamos el formulario
+     * 1. Quitamos el formulario
+     * 2.Mostramos un mensaje de agradecimiento
+     * 3.Damos opcion de volver a enviar el mensaje
+     */
+    setFormData({
+      name: "",
+      lastName: "",
+      email: "",
+      tel: "",
+      schedule: "",
+      info: "",
+    });
+    setSubmit(true);
   };
 
   // Generar las franjas horarias
@@ -50,12 +72,29 @@ const Form = () => {
     return franjas;
   };
 
-  return (
+  return submit ? (
     <div className="form-container">
-      <h1>Formulario de Contacto</h1>
+      <h1>Merci de nous avoir contacté !</h1>
+      <p style={{ maxWidth: 470 }}>
+        Nous avons bien reçu votre message et vous répondrons dans les plus
+        brefs délais. Si vous avez besoin d&apos;une assistance urgente,
+        n&apos;hésitez pas à nous appeler au
+        <span style={{ color: "white" }}> 0592 93 93 93</span> ou à nous envoyer
+        un e-mail à
+        <span style={{ color: "white" }}> Bayanesolution@bayane.com</span>.
+      </p>
+      <Link to="/faqs">
+        <button>FAQs</button>
+      </Link>
+      <button onClick={handleFormAgain}>Remplir à nouveau le formulaire</button>
+    </div>
+  ) : (
+    <div className="form-container">
+      <h1>Formulaire de Contact</h1>
+
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Prenom</label>
+          <label htmlFor="name">Prénom</label>
           <input
             type="text"
             id="name"

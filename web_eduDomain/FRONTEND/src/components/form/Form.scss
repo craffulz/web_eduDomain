@@ -14,32 +14,37 @@ $formcolor: #cc8bae;
 $boxshadow: 1px 2px 10px #3a165e;
 
 .form-container {
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
   padding: 20px;
   background: rgb(56, 55, 55);
   border-radius: 8px;
   box-shadow: $boxshadow;
-  h1 {
+  h1, p {
     text-align: center;
-    color: #cc8bae; /* Color principal para los títulos */
+    color: #cc8bae; 
   }
+ 
 }
 
-/* Estilos para los encabezados */
 
-/* Estilos para los grupos de formulario */
 .form-group {
   margin-bottom: 15px;
 }
 
-/* Estilos para las etiquetas */
+
 label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #cc8bae; /* Color principal para las etiquetas */
+  color: #cc8bae; 
 }
 
-/* Estilos para los campos de entrada */
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -47,7 +52,7 @@ textarea,
 select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #e0aebf; /* Un tono más claro de #772953 para los bordes */
+  border: 1px solid #e0aebf; 
   border-radius: 4px;
   box-sizing: border-box;
   background-color: rgb(83, 77, 77);
@@ -55,9 +60,8 @@ select {
   color: #cc8bae;
 }
 
-/* Estilos para el botón de envío */
 button {
-  background-color: #cc8bae; /* Color principal para el botón */
+  background-color: #cc8bae; 
   color: $brand-color;
   border: none;
   padding: 15px 20px;
@@ -72,5 +76,6 @@ button {
 }
 
 button:hover {
-  background-color: #6e1f4e; /* Un tono más oscuro de #772953 para el estado hover del botón */
+  background-color: #6e1f4e; 
+  color: #cc8bae; 
 }

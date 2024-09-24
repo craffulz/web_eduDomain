@@ -33,5 +33,25 @@ $brand-color: #772953;
 
   .botona{
     padding: 5px;
+
+    button {
+      background-color: #cc8bae; 
+      color: $brand-color;
+      border: none;
+      padding: 15px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    
+    button:hover {
+      background-color: #6e1f4e; 
+      color: #cc8bae; 
+    }
   }
 }
