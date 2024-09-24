@@ -18,7 +18,7 @@ const Support = () => {
         "Les FAQ fournissent des réponses rapides aux questions courantes, " +
         "aidant les utilisateurs à résoudre des problèmes sans contacter le support client. " +
         "Elles sont organisées en format question-réponse pour une navigation facile.",
-      route: "/faq",
+      route: "/faqs",
     },
     {
       icon: inTime,

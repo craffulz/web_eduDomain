@@ -5,6 +5,7 @@ import Patrimoine from "../pages/Patrimoine.jsx";
 import Contact from "../pages/contact/Contact.jsx";
 import Support from "../pages/Support.jsx";
 import Formation from "../pages/Formation.jsx";
+import Faqs from "../pages/Faqs.jsx";
 
 import {
   RouterProvider,
@@ -19,6 +20,15 @@ const router = createBrowserRouter([
       <>
         <ScrollRestoration />
         <Home />
+      </>
+    ),
+  },
+  {
+    path: "/faqs",
+    element: (
+      <>
+        <ScrollRestoration />
+        <Faqs />
       </>
     ),
   },

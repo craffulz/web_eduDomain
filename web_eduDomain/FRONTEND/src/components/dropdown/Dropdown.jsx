@@ -4,13 +4,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { animated, useSpring } from "@react-spring/web";
+import { easeInOut } from "framer-motion";
 
 export default function Dropdown({ drop }) {
   console.log("Dropdowns mounts");
 
   const [springs] = useSpring(() => ({
     from: {opacity: 0 },
-    to: {opacity: 0.9},
+    to: {opacity: 0.9, transition: 'opacity 23s easeInOut'},
+    config: {
+      easing: easeInOut
+    }
   }));
   // const styles = useSprings(() => ({
   //   from: { opacity: 0 },

@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 
 import "./liteNavbar/LiteNavbar.scss";
 import "./navbar/Navbar.scss";
@@ -68,6 +68,10 @@ const NavbarPicker = () => {
     },
     {
       button: { button: "Clients", route: "/#clients" },
+      drop: null,
+    },
+    {
+      button: { button: "FAQs", route: "/faqs" },
       drop: null,
     },
     {
