@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
  * navegar por la pagina web. Tambien el cambio de tema.
  */
 const Navbar = ({ navbarButtons }) => {
-  console.log("Navbar Mounts");
+  
   /**
    * Probando estilos
    */
