@@ -7,12 +7,13 @@ import { useState } from "react";
 const LiteNavbar = ({ navbarButtons }) => {
   const [openLiteDrop, setLiteOpenDrop] = useState(false);
   const [openDrop, setOpenDrop] = useState(false);
-
+  const [indexer, setIndexer] = useState(null);
   const handleClickOnLiteDrop = () => {
     setLiteOpenDrop((prev) => !prev);
   };
-  const handleClickOnDrop = () => {
+  const handleClickOnDrop = (index) => {
     console.log("click", openDrop);
+    setIndexer(index);
     setOpenDrop((prev) => !prev);
   };
 
@@ -31,12 +32,18 @@ const LiteNavbar = ({ navbarButtons }) => {
       {openLiteDrop && (
         <div className="drop">
           {navbarButtons.map(({ button, drop }, index) => (
-            <div key={index} className="butt" onClick={handleClickOnDrop}>
+            <div
+              key={index}
+              className="butt"
+              onClick={() => {
+                handleClickOnDrop(index);
+              }}
+            >
               {typeof button === "string" ? (
                 <>
                   <div className="button">
                     {button}
-                    {openDrop && (
+                    {(index === indexer) && openDrop && (
                       <Dropdown
                         className="dropsolu"
                         button={button}

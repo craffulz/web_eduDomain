@@ -66,8 +66,7 @@ const Navbar = ({ navbarButtons }) => {
       <div className="btns">
         <div className="navigation">
           {navbarButtons.map(({ button, drop }, index) => {
-            console.log(button);
-            return (
+            return typeof button === "string" ? (
               <div
                 className="btn"
                 key={index}
@@ -84,24 +83,16 @@ const Navbar = ({ navbarButtons }) => {
                 }}
                 onMouseLeave={handleMouseLeave}
               >
-                {typeof button === "string" ? (
-                  <>
-                    {button}
+                {button}
 
-                    {openDrop === index && drop.length > 0 && (
-                      <Dropdown
-                        className="drop"
-                        drop={(button, drop)}
-                      ></Dropdown>
-                    )}
-                  </>
-                ) : (
-                  <Link to={button.route}>{button.button}</Link>
-                )}
-                {/* {openDrop === index && drop.length > 0 && (
+                {openDrop === index && drop.length > 0 && (
                   <Dropdown className="drop" drop={(button, drop)}></Dropdown>
-                )} */}
+                )}
               </div>
+            ) : (
+             <Link className="btn" to={button.route}>
+                 {button.button} </Link>
+             
             );
           })}
         </div>
