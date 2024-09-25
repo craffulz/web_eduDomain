@@ -19,7 +19,7 @@ expressApp.use("/api/form", formRouter);
 
 /**El siguiente metodo es para redirigir todas las rutas no API al frontend */
 expressApp.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/dist", "index.html"));
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 expressApp.listen(process.env.PORT, () => {
