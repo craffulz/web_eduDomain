@@ -19,7 +19,7 @@ const sendEmail = (data) => {
 
   async function main() {
     // send mail with defined transport object
-    const infoA = await transporter.sendMail({
+    const mailToEnterprise = await transporter.sendMail({
       from: `${name + " " + lastName}  <${email}>`, // sender address
       to: "hamzachikriboudraa@gmail.com", // list of receivers
       subject: "Solicitude du demo", // Subject line
@@ -27,8 +27,19 @@ const sendEmail = (data) => {
       html: `<b>${info}.<br> Le solicitant voudrais que vous le contactez dans l'horarie: ${schedule}</b>`, // html body
     });
 
-    console.log("Message sent: %s", infoA.messageId);
+    console.log("Message sent to enterprise: %s", mailToEnterprise.messageId);
     // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
+
+    const mailToClient = await transporter.sendMail({
+      from: `EduDomain`,
+      to: email,
+      subject: "Nous avons reçu votre formulaire.",
+      text: `Salut! ${
+        name + " " + lastName
+      }, \n Nous esperons que tout va bien. Nous vous contactera dans le creaneau que vous avez indique.\nA tout a l'heure! \n Cordialement,  \n \n EduDomain.>`,
+    });
+
+    console.log("Message transfere au client", mailToClient.messageId);
   }
 
   main().catch(console.error);
