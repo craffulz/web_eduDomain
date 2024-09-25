@@ -13,7 +13,7 @@ dotenv.config();
 
 const expressApp = express();
 
-expressApp.use(express.static(path.join(__dirname, "dist")));
+expressApp.use(express.static( "dist"));
 
 expressApp.use("/api/form", formRouter);
 
