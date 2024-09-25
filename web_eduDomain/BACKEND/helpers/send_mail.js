@@ -9,8 +9,8 @@ const sendEmail = (data) => {
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // true for port 465, false for other ports
+    port: 465,
+    secure: true, // true for port 465, false for other ports
     auth: {
       user: process.env.EMAIL,
       pass: process.env.PWD,
