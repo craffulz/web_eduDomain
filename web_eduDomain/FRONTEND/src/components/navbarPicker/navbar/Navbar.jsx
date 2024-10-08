@@ -97,9 +97,9 @@ const Navbar = ({ navbarButtons }) => {
           })}
         </div>
         <div className="side">
-          <a href="/contact" className="btn-demo">
+          <Link to="/contact" className="btn-demo">
             Demandez une Démo
-          </a>
+          </Link>
         </div>
       </div>
     </div>
