@@ -1,11 +1,11 @@
 import "../styles/App.scss";
 import { Analytics } from "@vercel/analytics/react";
-import Home from "../pages/Home.tsx";
-import Patrimoine from "../pages/Patrimoine.jsx";
-import Contact from "../pages/contact/Contact.jsx";
-import Support from "../pages/Support.jsx";
-import Formation from "../pages/Formation.jsx";
-import Faqs from "../pages/Faqs.jsx";
+import Home from "../pages/home.tsx";
+import Patrimoine from "../pages/patrimoine.jsx";
+import Contact from "../pages/contact.jsx";
+import Support from "../pages/support.jsx";
+import Formation from "../pages/formation.jsx";
+import Faqs from "../pages/faqs.jsx";
 
 import {
   RouterProvider,

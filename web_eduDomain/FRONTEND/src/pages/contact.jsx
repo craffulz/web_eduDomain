@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-import "./Contact.scss";
+import "./contact/Contact.scss";
 
-import Form from "../../components/form/Form.jsx";
+import Form from "../components/form/Form.jsx";
 
-import Footer from "../../components/footer/Footer.jsx";
-import NavbarPicker from "../../components/navbarPicker/NavbarPicker.jsx";
+import Footer from "../components/footer/Footer.jsx";
+import NavbarPicker from "../components/navbarPicker/NavbarPicker.jsx";
 
 const Contact = () => {
   const [width, setWidth] = useState(window.innerWidth);
