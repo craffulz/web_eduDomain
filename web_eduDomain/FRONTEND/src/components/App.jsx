@@ -5,7 +5,7 @@ import Home from "../pages/home.jsx";
 import Contact from "../pages/contact.jsx";
 //import Support from "../pages/support.jsx";
 //import Formation from "../pages/formation.jsx";
-import Faqs from "../pages/faqs.jsx";
+//import Faqs from "../pages/faqs.jsx";
 
 import {
   RouterProvider,
@@ -23,15 +23,15 @@ const router = createBrowserRouter([
       </>
     ),
   },
-  {
-    path: "/faqs",
-    element: (
-      <>
-        <ScrollRestoration />
-        <Faqs />
-      </>
-    ),
-  },
+  // {
+  //   path: "/faqs",
+  //   element: (
+  //     <>
+  //       <ScrollRestoration />
+  //       <Faqs />
+  //     </>
+  //   ),
+  // },
   // {
   //   path: "/patrimoine",
   //   element: (
