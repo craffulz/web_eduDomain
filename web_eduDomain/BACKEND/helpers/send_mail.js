@@ -6,7 +6,7 @@ dotenv.config();
 
 // Configura AWS SES
 const sesClient = new SESClient({
-  region: "eu-north-1", 
+  region: "eu-north-1",
   credentials: {
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
@@ -15,24 +15,24 @@ const sesClient = new SESClient({
 
 // Función para enviar un correo electrónico usando SES
 const sendEmail = async (data) => {
-  const { name, lastName, email, schedule, info } = data;
+  const { name, lastName, email, tel, schedule, info } = data;
 
   const params = {
     Destination: {
-      ToAddresses: [email, "reports@hamzachikri.online"],
+      ToAddresses: [ "hamzachikriboudraa@gmail.com"],
     },
     Message: {
       Body: {
         Text: {
-          Data: `Hey ${name} ${lastName},
-          \n Merci beaucoup d'avoir rempli le formulaire de contact.
+          Data: `Hey ${name} ${lastName}, [${email, tel}]
+          \nMerci beaucoup d'avoir rempli le formulaire de contact.
           \nNotre département de support vous contactera à l'heure indiquée [${schedule}].
-          \nCordialement, l'équipe d'EduDomain.`,
+          \nCordialement, \nl'équipe d'EduDomain.`,
         },
       },
       Subject: { Data: info ? info : "Demande de démonstration" },
     },
-    Source: "reports@hamzachikri.online", // Verifica esta dirección en Amazon SES
+    Source: "hamzachikriboudraa@gmail.com", // Verifica esta dirección en Amazon SES
   };
 
   try {
