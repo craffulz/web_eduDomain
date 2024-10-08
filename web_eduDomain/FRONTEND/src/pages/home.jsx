@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-
 
 import Hero from "../components/hero/Hero.jsx";
 import Solutions from "../components/solutions/Solutions.jsx";
@@ -13,7 +12,6 @@ const Home = () => {
   const location = useLocation();
 
   useEffect(() => {
-    
     const hash = location.hash;
     if (hash) {
       const element = document.querySelector(hash);
