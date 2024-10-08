@@ -1,5 +1,5 @@
 import "../styles/App.scss";
-
+import { Analytics } from "@vercel/analytics/react";
 import Home from "../pages/Home.tsx";
 import Patrimoine from "../pages/Patrimoine.jsx";
 import Contact from "../pages/contact/Contact.jsx";
@@ -73,7 +73,9 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <>
-      <RouterProvider router={router}></RouterProvider>
+      <RouterProvider router={router}>
+        <Analytics />
+      </RouterProvider>
     </>
   );
 };
