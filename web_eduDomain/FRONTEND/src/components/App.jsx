@@ -4,7 +4,7 @@ import Home from "../pages/home.jsx";
 //import Patrimoine from "../pages/patrimoine.jsx";
 import Contact from "../pages/contact.jsx";
 //import Support from "../pages/support.jsx";
-import Formation from "../pages/formation.jsx";
+//import Formation from "../pages/formation.jsx";
 import Faqs from "../pages/faqs.jsx";
 
 import {
@@ -59,15 +59,15 @@ const router = createBrowserRouter([
   //     </>
   //   ),
   // },
-  {
-    path: "/formation",
-    element: (
-      <>
-        <ScrollRestoration />
-        <Formation />
-      </>
-    ),
-  },
+  // {
+  //   path: "/formation",
+  //   element: (
+  //     <>
+  //       <ScrollRestoration />
+  //       <Formation />
+  //     </>
+  //   ),
+  // },
 ]);
 
 const App = () => {
