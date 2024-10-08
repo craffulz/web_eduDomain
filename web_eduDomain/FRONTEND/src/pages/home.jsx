@@ -10,7 +10,7 @@ import NavabarPicker from "../components/navbarPicker/NavbarPicker.jsx";
 
 const Home = () => {
   const location = useLocation();
-
+console.log("Home sweet home")
   useEffect(() => {
     const hash = location.hash;
     if (hash) {
