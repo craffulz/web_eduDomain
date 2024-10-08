@@ -24,7 +24,7 @@ const sendEmail = async (data) => {
     Message: {
       Body: {
         Text: {
-          Data: `Hey ${name} ${lastName}, [${email, tel}]
+          Data: `Hey ${name} ${lastName}, [email::${email}, tel::${tel}]
           \nMerci beaucoup d'avoir rempli le formulaire de contact.
           \nNotre département de support vous contactera à l'heure indiquée [${schedule}].
           \nCordialement, \nl'équipe d'EduDomain.`,
