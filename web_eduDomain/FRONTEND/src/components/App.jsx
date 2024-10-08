@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Home from "../pages/home.jsx";
 //import Patrimoine from "../pages/patrimoine.jsx";
 import Contact from "../pages/contact.jsx";
-import Support from "../pages/support.jsx";
+//import Support from "../pages/support.jsx";
 import Formation from "../pages/formation.jsx";
 import Faqs from "../pages/faqs.jsx";
 
@@ -50,15 +50,15 @@ const router = createBrowserRouter([
       </>
     ),
   },
-  {
-    path: "/support",
-    element: (
-      <>
-        <ScrollRestoration />
-        <Support />
-      </>
-    ),
-  },
+  // {
+  //   path: "/support",
+  //   element: (
+  //     <>
+  //       <ScrollRestoration />
+  //       <Support />
+  //     </>
+  //   ),
+  // },
   {
     path: "/formation",
     element: (
