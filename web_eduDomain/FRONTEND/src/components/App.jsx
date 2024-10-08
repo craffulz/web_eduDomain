@@ -1,11 +1,11 @@
 import "../styles/App.scss";
-import { Analytics } from "@vercel/analytics/react";
+//import { Analytics } from "@vercel/analytics/react";
 import Home from "../pages/home.jsx";
-//import Patrimoine from "../pages/patrimoine.jsx";
+import Patrimoine from "../pages/patrimoine.jsx";
 import Contact from "../pages/contact.jsx";
-//import Support from "../pages/support.jsx";
-//import Formation from "../pages/formation.jsx";
-//import Faqs from "../pages/faqs.jsx";
+import Support from "../pages/support.jsx";
+import Formation from "../pages/formation.jsx";
+import Faqs from "../pages/faqs.jsx";
 
 import {
   RouterProvider,
@@ -23,24 +23,24 @@ const router = createBrowserRouter([
       </>
     ),
   },
-  // {
-  //   path: "/faqs",
-  //   element: (
-  //     <>
-  //       <ScrollRestoration />
-  //       <Faqs />
-  //     </>
-  //   ),
-  // },
-  // {
-  //   path: "/patrimoine",
-  //   element: (
-  //     <>
-  //       <ScrollRestoration />
-  //       <Patrimoine />
-  //     </>
-  //   ),
-  // },
+  {
+    path: "/faqs",
+    element: (
+      <>
+        <ScrollRestoration />
+        <Faqs />
+      </>
+    ),
+  },
+  {
+    path: "/patrimoine",
+    element: (
+      <>
+        <ScrollRestoration />
+        <Patrimoine />
+      </>
+    ),
+  },
   {
     path: "/contact",
     element: (
@@ -50,31 +50,31 @@ const router = createBrowserRouter([
       </>
     ),
   },
-  // {
-  //   path: "/support",
-  //   element: (
-  //     <>
-  //       <ScrollRestoration />
-  //       <Support />
-  //     </>
-  //   ),
-  // },
-  // {
-  //   path: "/formation",
-  //   element: (
-  //     <>
-  //       <ScrollRestoration />
-  //       <Formation />
-  //     </>
-  //   ),
-  // },
+  {
+    path: "/support",
+    element: (
+      <>
+        <ScrollRestoration />
+        <Support />
+      </>
+    ),
+  },
+  {
+    path: "/formation",
+    element: (
+      <>
+        <ScrollRestoration />
+        <Formation />
+      </>
+    ),
+  },
 ]);
 
 const App = () => {
   return (
     <>
       <RouterProvider router={router}>
-        <Analytics />
+       
       </RouterProvider>
     </>
   );
