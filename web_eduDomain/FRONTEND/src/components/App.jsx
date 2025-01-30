@@ -1,6 +1,6 @@
 import "../styles/App.scss";
 //import { Analytics } from "@vercel/analytics/react";
-import Home from "../pages/Home.jsx";
+import Home from "../pages/home.jsx";
 import Patrimoine from "../pages/Patrimoine.jsx";
 import Contact from "../pages/Contact.jsx";
 import Support from "../pages/Support.jsx";
