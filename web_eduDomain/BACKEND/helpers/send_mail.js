@@ -19,7 +19,7 @@ const sendEmail = async (data) => {
 
   const params = {
     Destination: {
-      ToAddresses: [ "hamzachikriboudraa@gmail.com"],
+      ToAddresses:  ["hamzachikriboudraa@gmail.com"],
     },
     Message: {
       Body: {
