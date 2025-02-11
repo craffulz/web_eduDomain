@@ -1,5 +1,5 @@
 import Solus from "../components/solution/Solus.tsx";
-import { motion } from "framer-motion";
+
 
 import res_sketch from "../assets/solutions/res_sketch.webp";
 import res_fucsia_sketch from "../assets/solutions/res_sketch_little.webp";
@@ -19,12 +19,7 @@ const Patrimoine = () => {
   const solution = {
     title: "Patrimoine",
     intro: `Le module
-                    ${(
-                      <motion.div className="patrimoine">
-                        {" "}
-                        Patrimoine{" "}
-                      </motion.div>
-                    )}
+                    Patrimoine
                     offre une solution intégrale et efficace pour la gestion des
                     différentes résidences que nous gérons, permettant un
                     contrôle centralisé et simplifié de toutes les propriétés.
