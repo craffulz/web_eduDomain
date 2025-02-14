@@ -10,7 +10,7 @@ A modern landing page designed to present the key aspects of an **ERP system** f
 - 🌍 **SEO & Accessibility Friendly** – Improves discoverability and usability.  
 
 ## Live Demo  
-🔗 [Check out the landing page here](https://web-edu-domain.vercel.app/)  
+🔗 [Check out the landing page here](https://web-edu-domain-git-secondmain-craffulzs-projects.vercel.app/)  
 
 ## Installation  
 
@@ -31,7 +31,7 @@ Ensure you have the following installed:
 
 2️⃣ Navigate to the project folder:  
   ```bash
-  cd erp-landing-page
+  cd web_edudomain
   ```  
 
 3️⃣ Install dependencies:  
