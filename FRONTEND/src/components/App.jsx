@@ -3,9 +3,9 @@ import "../styles/App.scss";
 import Home from "../pages/home.jsx";
 import Patrimoine from "../pages/patrimoine.jsx";
 import Contact from "../pages/contact.jsx";
-import Support from "../pages/Support.jsx";
-import Formation from "../pages/Formation.jsx";
-import Faqs from "../pages/Faqs.jsx";
+import Support from "../pages/support.jsx";
+import Formation from "../pages/formation.jsx";
+import Faqs from "../pages/faqs.jsx";
 
 import {
   RouterProvider,
