@@ -1,69 +1,68 @@
-# EduDomain Web Page
-Planificacion para el montaje de la pagina web de la aplicacion EduDomain.
+# 🏢 ERP University Residence Management - Landing Page  
 
-Utilizaremos React JS para montar una pagina web reactiva y con una experiencia de usuario intuitiva y agradable.
+A modern landing page designed to present the key aspects of an **ERP system** for **university residence management**. This project focuses on delivering an intuitive and visually appealing interface to showcase the system's capabilities.  
 
-Boceto de guia de apartados que tendra la web:
+## Features  
+- 🎨 **Modern and Responsive Design** – Ensures seamless navigation on all devices.  
+- 🚀 **Fast Performance** – Optimized for speed and efficiency.  
+- 🖥️ **Interactive UI Components** – Engaging elements to enhance user experience.  
+- 📞 **Contact & Inquiry Forms** – Allows users to reach out for more information.  
+- 🌍 **SEO & Accessibility Friendly** – Improves discoverability and usability.  
 
->Inicio:
+## Live Demo  
+🔗 [Check out the landing page here](https://web-edu-domain.vercel.app/)  
 
-    >div Banner con frases descriptivas del objetivo a conseguir por la aplicacion.
-    >div Soluciones que ofrece EduDomain
-        >divs Descripcion breve de cada una de ellas. Al hacer click en estas, enlace a la pagina donde
-        se explica detalladamente - enlace
-    >div por qué utilizar EduDomain - enlace
-    >ofrecemos soporte - enlace
-    >formacion - enlace
-    >quienes somos - enlace
-    >clientes
-    >contacto
-    
->Que es EduDomain?: [CAMBIO]>No se puede llamar así este boton porque ya se está describiendo parte de EduDomain en la pagina de inicio.
+## Installation  
 
-    >Caracateristicas funcionales:
-    
-        >Gestion de:
-        
-            >Usuarios
-            >Patrimonio
-            >Reservas
-            >Contratos
-            >Incidencias
-            >Facturas
-            >Consumo agua y luz
-            
-    ¿Por qué utilizar EduDomain?
-    
-        >Seguridad
-        >Performance
-        >Escalabilidad
-        >Fiabilidad
-        >Ergonomia
-        >Compatibilidad
+### **Prerequisites**  
+Ensure you have the following installed:  
+- **Node.js** (v16 or higher)  
+- **pnpm** (globally installed) → Install with:  
+  ```bash
+  npm install -g pnpm
+  ```  
 
->Soporte
+### **Steps to Run Locally**  
 
->Formación     
+1️⃣ Clone the repository:  
+  ```bash
+  git clone https://github.com/craffulz/web_eduDomain.git
+  ```  
 
->Quienes somos?
-    
-    >Enlace a la pagina web empresarial responsable de la aplicacion.
+2️⃣ Navigate to the project folder:  
+  ```bash
+  cd erp-landing-page
+  ```  
 
->Casos de exito
+3️⃣ Install dependencies:  
+  ```bash
+  pnpm install
+  ```  
 
->Contacto
+4️⃣ Start the development server:  
+  ```bash
+  pnpm run dev
+  ```  
 
+5️⃣ Open in browser:  
+  ```bash
+  http://localhost:3000
+  ```  
 
-# ESTILOS
+## Tech Stack  
+- Vite
+- ⚛️ React  
+- 🟨 JavaScript  
+- 🎨 Sass  
+- 🌍 Node.js  
+- ☁️ AWS (for form communication)  
 
-    
->Font-family: Optimistic Text, -apple-system, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji
-    
->Contenido:
-    Como queremos presentar el contenido de la pagina web. ¿Scroll largo, o por 'paginas'?
-    
-    
-# CONCLUSION
-    Hacer una pagina de inicio presentando un resumen de todas las pestañas que hay.
-    En cada mini-resumen poner enlaces a otras paginas donde se detallen¿?.
+## 📌 Status  
+This is a **demo** version and is not intended for production use. 
 
+## 📝 Feedback  
+Have suggestions or found a bug? Feel free to open an issue or reach out at [hamzadevel@gmail.com](mailto:hamzadevel@gmail.com) 
+
+## 👥 Authors  
+- [**craffulz**](https://www.github.com/craffulz) – Developer  
+  
